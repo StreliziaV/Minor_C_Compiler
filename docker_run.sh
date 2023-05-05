@@ -1,0 +1,1 @@
+sudo docker run -it --mount type=bind,source=/home/strelizia/Desktop/4180A4,target=/opt/compiler/ a4 bash

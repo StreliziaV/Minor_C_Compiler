@@ -1,0 +1,70 @@
+program:var_declarations statements
+var_declarations:var_declaration var_declarations
+var_declarations:$
+var_declaration:INT declaration_list SEMI
+declaration_list:declaration_list COMMA declaration
+declaration_list:declaration
+declaration:ID ASSIGN exp
+declaration:ID LSQUARE INT_NUM RSQUARE
+declaration:ID
+code_block:statement
+code_block:LBRACE statements RBRACE
+statements:statements statement
+statements:statement
+statement:assign_statement SEMI
+statement:control_statement
+statement:read_write_statement SEMI
+statement:SEMI
+control_statement:if_statement
+control_statement:while_statement
+control_statement:do_while_statement SEMI
+control_statement:return_statement SEMI
+read_write_statement:read_statement
+read_write_statement:write_statement
+assign_statement:ID LSQUARE exp RSQUARE ASSIGN exp
+assign_statement:ID ASSIGN exp
+if_statement:if_struct if_tail
+if_struct:if_head code_block
+if_head:IF LPAR exp RPAR
+if_tail:ELSE code_block
+if_tail:$
+while_statement:while_head code_block
+while_head:while_head_L exp RPAR
+do_while_statement:do_token code_block WHILE LPAR exp RPAR
+do_token:DO
+return_statement:RETURN
+read_statement:READ LPAR ID RPAR
+write_statement:WRITE LPAR exp RPAR
+exp:exp OROR exp1
+exp:exp1
+exp1:exp1 ANDAND exp2
+exp1:exp2
+exp2:exp2 OR_OP exp3
+exp2:exp3
+exp3:exp3 AND_OP exp4
+exp3:exp4
+exp4:exp4 EQ exp5
+exp4:exp4 NOTEQ exp5
+exp4:exp5
+exp5:exp5 LTEQ exp6
+exp5:exp5 GTEQ exp6
+exp5:exp5 LT exp6
+exp5:exp5 GT exp6
+exp5:exp6
+exp6:exp6 SHL_OP exp7
+exp6:exp6 SHR_OP exp7
+exp6:exp7
+exp7:exp7 PLUS T
+exp7:exp7 MINUS T
+exp7:T
+T:T MUL_OP P
+T:T DIV_OP P
+T:P
+P:NOT_OP F
+P:MINUS F
+P:F
+F:LPAR exp RPAR
+F:INT_NUM
+F:ID LSQUARE exp RSQUARE
+F:ID
+while_head_L:WHILE LPAR

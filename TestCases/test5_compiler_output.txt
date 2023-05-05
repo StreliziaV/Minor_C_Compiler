@@ -1,0 +1,638 @@
+main:
+addi $s0 $zero 0
+sw $t8 0($sp)
+addi $s1 $zero 0
+addi $s2 $zero 0
+addi $s3 $zero 0
+addi $s4 $zero 0
+addi $s5 $zero 0
+addi $s6 $zero 0
+addi $s7 $zero 0
+addi $t0 $zero 0
+addi $t1 $zero 2
+add $t8 $zero $t0
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+sw $t1 0($t8)
+
+addi $t2 $zero 1
+addi $t3 $zero 3
+add $t8 $zero $t2
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+sw $t3 0($t8)
+
+addi $t4 $zero 2
+addi $t5 $zero 5
+add $t8 $zero $t4
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+sw $t5 0($t8)
+
+addi $t6 $zero 3
+addi $t7 $zero 7
+add $t8 $zero $t6
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+sw $t7 0($t8)
+
+addi $t8 $zero 4
+sw $t8 -48($sp)
+addi $t8 $zero 11
+sw $t8 -52($sp)
+lw $t8 -48($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -52($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 5
+sw $t8 -56($sp)
+addi $t8 $zero 13
+sw $t8 -60($sp)
+lw $t8 -56($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -60($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 6
+sw $t8 -64($sp)
+addi $t8 $zero 17
+sw $t8 -68($sp)
+lw $t8 -64($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -68($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 7
+sw $t8 -72($sp)
+addi $t8 $zero 19
+sw $t8 -76($sp)
+lw $t8 -72($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -76($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 8
+sw $t8 -80($sp)
+addi $t8 $zero 23
+sw $t8 -84($sp)
+lw $t8 -80($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -84($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 9
+sw $t8 -88($sp)
+addi $t8 $zero 29
+sw $t8 -92($sp)
+lw $t8 -88($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -92($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 10
+sw $t8 -96($sp)
+addi $t8 $zero 31
+sw $t8 -100($sp)
+lw $t8 -96($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -100($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 11
+sw $t8 -104($sp)
+addi $t8 $zero 37
+sw $t8 -108($sp)
+lw $t8 -104($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -108($sp)
+sw $t9 0($t8)
+
+addi $v0 $zero 5
+syscall
+add $s0 $v0 $zero
+
+addi $t8 $zero 0
+sw $t8 -112($sp)
+lw $t8 -112($sp)
+add $s1 $t8 $zero
+
+addi $t8 $zero 0
+sw $t8 -116($sp)
+lw $t8 -116($sp)
+add $s3 $t8 $zero
+
+add $t8 $zero $s0
+sw $t8 -120($sp)
+addi $t8 $zero 1
+sw $t8 -124($sp)
+lw $t8 -120($sp)
+lw $t9 -124($sp)
+sub $t9 $t8 $t9
+sw $t9 -120($sp)
+lw $t8 -120($sp)
+add $s2 $t8 $zero
+
+add $t8 $zero $s0
+sw $t8 -128($sp)
+addi $t8 $zero 2
+sw $t8 -132($sp)
+lw $t8 -128($sp)
+lw $t9 -132($sp)
+slt $t9 $t8 $t9
+sw $t9 -128($sp)
+add $t8 $zero $s0
+sw $t8 -136($sp)
+addi $t8 $zero 2
+sw $t8 -140($sp)
+lw $t8 -136($sp)
+lw $t9 -140($sp)
+slt $t9 $t9 $t8
+sw $t9 -136($sp)
+add $t8 $zero $s0
+sw $t8 -144($sp)
+addi $t8 $zero 1
+sw $t8 -148($sp)
+lw $t8 -144($sp)
+lw $t9 -148($sp)
+and $t9 $t8 $t9
+sw $t9 -144($sp)
+addi $t8 $zero 0
+sw $t8 -152($sp)
+lw $t8 -144($sp)
+lw $t9 -152($sp)
+xor $t9 $t8 $t9
+sltiu $t9 $t9 1
+sw $t9 -144($sp)
+lw $t8 -136($sp)
+lw $t9 -144($sp)
+addi $v0 $zero 1
+movz $v0 $zero $t8
+movz $v0 $zero $t9
+sw $v0 -156($sp)
+lw $t8 -128($sp)
+lw $t9 -156($sp)
+addi $v0 $zero 1
+movn $t8 $v0 $t8
+movn $t9 $v0 $t9
+or $v0 $t8 $t9
+sw $v0 -160($sp)
+lw $t8 -160($sp)
+beq $t8 $zero ELSE_0
+addi $t8 $zero 0
+sw $t8 -164($sp)
+lw $a0 -164($sp)
+addi $v0 $zero 1
+syscall
+
+j END
+
+j IF_OUT_0
+ELSE_0:
+IF_OUT_0:
+
+WHILE_0:
+add $t8 $zero $s2
+sw $t8 -168($sp)
+addi $t8 $zero 1
+sw $t8 -172($sp)
+lw $t8 -168($sp)
+lw $t9 -172($sp)
+and $t9 $t8 $t9
+sw $t9 -168($sp)
+addi $t8 $zero 0
+sw $t8 -176($sp)
+lw $t8 -168($sp)
+lw $t9 -176($sp)
+xor $t9 $t8 $t9
+sltiu $t9 $t9 1
+sw $t9 -168($sp)
+lw $t8 -168($sp)
+beq $t8 $zero WHILE_OUT_0
+add $t8 $zero $s2
+sw $t8 -180($sp)
+addi $t8 $zero 1
+sw $t8 -184($sp)
+lw $t8 -180($sp)
+lw $t9 -184($sp)
+srav $t9 $t8 $t9
+sw $t9 -180($sp)
+lw $t8 -180($sp)
+add $s2 $t8 $zero
+
+add $t8 $zero $s1
+sw $t8 -188($sp)
+addi $t8 $zero 1
+sw $t8 -192($sp)
+lw $t8 -188($sp)
+lw $t9 -192($sp)
+add $t9 $t8 $t9
+sw $t9 -188($sp)
+lw $t8 -188($sp)
+add $s1 $t8 $zero
+
+j WHILE_0
+WHILE_OUT_0:
+
+WHILE_1:
+add $t8 $zero $s3
+sw $t8 -196($sp)
+addi $t8 $zero 12
+sw $t8 -200($sp)
+lw $t8 -196($sp)
+lw $t9 -200($sp)
+slt $t9 $t8 $t9
+sw $t9 -196($sp)
+lw $t8 -196($sp)
+beq $t8 $zero WHILE_OUT_1
+add $t8 $zero $s0
+sw $t8 -204($sp)
+add $t8 $zero $s3
+sw $t8 -208($sp)
+lw $t8 -208($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -208($sp)
+lw $t8 -204($sp)
+lw $t9 -208($sp)
+xor $t9 $t8 $t9
+sltiu $t9 $t9 1
+sw $t9 -204($sp)
+lw $t8 -204($sp)
+beq $t8 $zero ELSE_1
+addi $t8 $zero 1
+sw $t8 -212($sp)
+lw $a0 -212($sp)
+addi $v0 $zero 1
+syscall
+
+j END
+
+j IF_OUT_1
+ELSE_1:
+IF_OUT_1:
+
+addi $t8 $zero 1
+sw $t8 -216($sp)
+lw $t8 -216($sp)
+add $s4 $t8 $zero
+
+add $t8 $zero $s3
+sw $t8 -220($sp)
+lw $t8 -220($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -220($sp)
+add $t8 $zero $s0
+sw $t8 -224($sp)
+add $t8 $zero $s3
+sw $t8 -228($sp)
+lw $t8 -228($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -228($sp)
+add $t8 $zero $s0
+sw $t8 -232($sp)
+lw $t8 -228($sp)
+lw $t9 -232($sp)
+div $t8 $t9
+mflo $t9
+sw $t9 -228($sp)
+lw $t8 -224($sp)
+lw $t9 -228($sp)
+mul $t9 $t8 $t9
+sw $t9 -224($sp)
+lw $t8 -220($sp)
+lw $t9 -224($sp)
+sub $t9 $t8 $t9
+sw $t9 -220($sp)
+lw $t8 -220($sp)
+add $s6 $t8 $zero
+
+add $t8 $zero $s2
+sw $t8 -236($sp)
+lw $t8 -236($sp)
+add $s7 $t8 $zero
+
+WHILE_2:
+add $t8 $zero $s7
+sw $t8 -240($sp)
+lw $t8 -240($sp)
+beq $t8 $zero WHILE_OUT_2
+add $t8 $zero $s7
+sw $t8 -244($sp)
+addi $t8 $zero 1
+sw $t8 -248($sp)
+lw $t8 -244($sp)
+lw $t9 -248($sp)
+and $t9 $t8 $t9
+sw $t9 -244($sp)
+lw $t8 -244($sp)
+beq $t8 $zero ELSE_2
+add $t8 $zero $s4
+sw $t8 -252($sp)
+add $t8 $zero $s6
+sw $t8 -256($sp)
+lw $t8 -252($sp)
+lw $t9 -256($sp)
+mul $t9 $t8 $t9
+sw $t9 -252($sp)
+lw $t8 -252($sp)
+add $s4 $t8 $zero
+
+add $t8 $zero $s4
+sw $t8 -260($sp)
+add $t8 $zero $s0
+sw $t8 -264($sp)
+add $t8 $zero $s4
+sw $t8 -268($sp)
+add $t8 $zero $s0
+sw $t8 -272($sp)
+lw $t8 -268($sp)
+lw $t9 -272($sp)
+div $t8 $t9
+mflo $t9
+sw $t9 -268($sp)
+lw $t8 -264($sp)
+lw $t9 -268($sp)
+mul $t9 $t8 $t9
+sw $t9 -264($sp)
+lw $t8 -260($sp)
+lw $t9 -264($sp)
+sub $t9 $t8 $t9
+sw $t9 -260($sp)
+lw $t8 -260($sp)
+add $s4 $t8 $zero
+
+j IF_OUT_2
+ELSE_2:
+IF_OUT_2:
+
+add $t8 $zero $s6
+sw $t8 -276($sp)
+add $t8 $zero $s6
+sw $t8 -280($sp)
+lw $t8 -276($sp)
+lw $t9 -280($sp)
+mul $t9 $t8 $t9
+sw $t9 -276($sp)
+lw $t8 -276($sp)
+add $s6 $t8 $zero
+
+add $t8 $zero $s6
+sw $t8 -284($sp)
+add $t8 $zero $s0
+sw $t8 -288($sp)
+add $t8 $zero $s6
+sw $t8 -292($sp)
+add $t8 $zero $s0
+sw $t8 -296($sp)
+lw $t8 -292($sp)
+lw $t9 -296($sp)
+div $t8 $t9
+mflo $t9
+sw $t9 -292($sp)
+lw $t8 -288($sp)
+lw $t9 -292($sp)
+mul $t9 $t8 $t9
+sw $t9 -288($sp)
+lw $t8 -284($sp)
+lw $t9 -288($sp)
+sub $t9 $t8 $t9
+sw $t9 -284($sp)
+lw $t8 -284($sp)
+add $s6 $t8 $zero
+
+add $t8 $zero $s7
+sw $t8 -300($sp)
+addi $t8 $zero 1
+sw $t8 -304($sp)
+lw $t8 -300($sp)
+lw $t9 -304($sp)
+srav $t9 $t8 $t9
+sw $t9 -300($sp)
+lw $t8 -300($sp)
+add $s7 $t8 $zero
+
+j WHILE_2
+WHILE_OUT_2:
+
+add $t8 $zero $s4
+sw $t8 -308($sp)
+addi $t8 $zero 1
+sw $t8 -312($sp)
+lw $t8 -308($sp)
+lw $t9 -312($sp)
+xor $t9 $t8 $t9
+addi $t8 $zero 1
+movn $t9 $t8 $t9
+sw $t9 -308($sp)
+add $t8 $zero $s4
+sw $t8 -316($sp)
+add $t8 $zero $s0
+sw $t8 -320($sp)
+addi $t8 $zero 1
+sw $t8 -324($sp)
+lw $t8 -320($sp)
+lw $t9 -324($sp)
+sub $t9 $t8 $t9
+sw $t9 -320($sp)
+lw $t8 -316($sp)
+lw $t9 -320($sp)
+xor $t9 $t8 $t9
+addi $t8 $zero 1
+movn $t9 $t8 $t9
+sw $t9 -316($sp)
+lw $t8 -308($sp)
+lw $t9 -316($sp)
+addi $v0 $zero 1
+movz $v0 $zero $t8
+movz $v0 $zero $t9
+sw $v0 -328($sp)
+lw $t8 -328($sp)
+beq $t8 $zero ELSE_3
+addi $t8 $zero 1
+sw $t8 -332($sp)
+lw $t8 -332($sp)
+add $s5 $t8 $zero
+
+WHILE_3:
+add $t8 $zero $s5
+sw $t8 -336($sp)
+add $t8 $zero $s1
+sw $t8 -340($sp)
+lw $t8 -336($sp)
+lw $t9 -340($sp)
+slt $t9 $t8 $t9
+sw $t9 -336($sp)
+add $t8 $zero $s4
+sw $t8 -344($sp)
+add $t8 $zero $s0
+sw $t8 -348($sp)
+addi $t8 $zero 1
+sw $t8 -352($sp)
+lw $t8 -348($sp)
+lw $t9 -352($sp)
+sub $t9 $t8 $t9
+sw $t9 -348($sp)
+lw $t8 -344($sp)
+lw $t9 -348($sp)
+xor $t9 $t8 $t9
+addi $t8 $zero 1
+movn $t9 $t8 $t9
+sw $t9 -344($sp)
+lw $t8 -336($sp)
+lw $t9 -344($sp)
+addi $v0 $zero 1
+movz $v0 $zero $t8
+movz $v0 $zero $t9
+sw $v0 -356($sp)
+lw $t8 -356($sp)
+beq $t8 $zero WHILE_OUT_3
+add $t8 $zero $s5
+sw $t8 -360($sp)
+addi $t8 $zero 1
+sw $t8 -364($sp)
+lw $t8 -360($sp)
+lw $t9 -364($sp)
+add $t9 $t8 $t9
+sw $t9 -360($sp)
+lw $t8 -360($sp)
+add $s5 $t8 $zero
+
+add $t8 $zero $s4
+sw $t8 -368($sp)
+add $t8 $zero $s4
+sw $t8 -372($sp)
+lw $t8 -368($sp)
+lw $t9 -372($sp)
+mul $t9 $t8 $t9
+sw $t9 -368($sp)
+lw $t8 -368($sp)
+add $s4 $t8 $zero
+
+add $t8 $zero $s4
+sw $t8 -376($sp)
+add $t8 $zero $s0
+sw $t8 -380($sp)
+add $t8 $zero $s4
+sw $t8 -384($sp)
+add $t8 $zero $s0
+sw $t8 -388($sp)
+lw $t8 -384($sp)
+lw $t9 -388($sp)
+div $t8 $t9
+mflo $t9
+sw $t9 -384($sp)
+lw $t8 -380($sp)
+lw $t9 -384($sp)
+mul $t9 $t8 $t9
+sw $t9 -380($sp)
+lw $t8 -376($sp)
+lw $t9 -380($sp)
+sub $t9 $t8 $t9
+sw $t9 -376($sp)
+lw $t8 -376($sp)
+add $s4 $t8 $zero
+
+j WHILE_3
+WHILE_OUT_3:
+
+add $t8 $zero $s4
+sw $t8 -392($sp)
+add $t8 $zero $s0
+sw $t8 -396($sp)
+addi $t8 $zero 1
+sw $t8 -400($sp)
+lw $t8 -396($sp)
+lw $t9 -400($sp)
+sub $t9 $t8 $t9
+sw $t9 -396($sp)
+lw $t8 -392($sp)
+lw $t9 -396($sp)
+xor $t9 $t8 $t9
+addi $t8 $zero 1
+movn $t9 $t8 $t9
+sw $t9 -392($sp)
+lw $t8 -392($sp)
+beq $t8 $zero ELSE_4
+addi $t8 $zero 0
+sw $t8 -404($sp)
+lw $a0 -404($sp)
+addi $v0 $zero 1
+syscall
+
+j END
+
+j IF_OUT_4
+ELSE_4:
+IF_OUT_4:
+
+j IF_OUT_3
+ELSE_3:
+IF_OUT_3:
+
+add $t8 $zero $s3
+sw $t8 -408($sp)
+addi $t8 $zero 1
+sw $t8 -412($sp)
+lw $t8 -408($sp)
+lw $t9 -412($sp)
+add $t9 $t8 $t9
+sw $t9 -408($sp)
+lw $t8 -408($sp)
+add $s3 $t8 $zero
+
+j WHILE_1
+WHILE_OUT_1:
+
+addi $t8 $zero 1
+sw $t8 -416($sp)
+lw $a0 -416($sp)
+addi $v0 $zero 1
+syscall
+
+j END
+
+END:

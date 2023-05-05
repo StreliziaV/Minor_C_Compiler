@@ -1,0 +1,804 @@
+main:
+sw $t8 0($sp)
+sw $t8 -16($sp)
+sw $t8 -32($sp)
+addi $s0 $zero 0
+addi $v0 $zero 5
+syscall
+add $s0 $v0 $zero
+
+addi $t0 $zero 0
+addi $t1 $zero 1
+add $t8 $zero $t0
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+sw $t1 0($t8)
+
+addi $t2 $zero 1
+addi $t3 $zero 1
+add $t8 $zero $t2
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+sw $t3 0($t8)
+
+addi $t4 $zero 2
+addi $t5 $zero 1
+add $t8 $zero $t4
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+sw $t5 0($t8)
+
+addi $t6 $zero 3
+addi $t7 $zero 0
+add $t8 $zero $t6
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+sw $t7 0($t8)
+
+addi $t8 $zero 0
+sw $t8 -48($sp)
+addi $t8 $zero 1
+sw $t8 -52($sp)
+lw $t8 -48($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 -52($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 1
+sw $t8 -56($sp)
+addi $t8 $zero 0
+sw $t8 -60($sp)
+lw $t8 -56($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 -60($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 2
+sw $t8 -64($sp)
+addi $t8 $zero 0
+sw $t8 -68($sp)
+lw $t8 -64($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 -68($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 3
+sw $t8 -72($sp)
+addi $t8 $zero 1
+sw $t8 -76($sp)
+lw $t8 -72($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 -76($sp)
+sw $t9 0($t8)
+
+WHILE_0:
+add $t8 $zero $s0
+sw $t8 -80($sp)
+lw $t8 -80($sp)
+beq $t8 $zero WHILE_OUT_0
+add $t8 $zero $s0
+sw $t8 -84($sp)
+addi $t8 $zero 1
+sw $t8 -88($sp)
+lw $t8 -84($sp)
+lw $t9 -88($sp)
+and $t9 $t8 $t9
+sw $t9 -84($sp)
+lw $t8 -84($sp)
+beq $t8 $zero ELSE_0
+addi $t8 $zero 0
+sw $t8 -92($sp)
+addi $t8 $zero 0
+sw $t8 -96($sp)
+lw $t8 -96($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -96($sp)
+addi $t8 $zero 0
+sw $t8 -100($sp)
+lw $t8 -100($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -100($sp)
+lw $t8 -96($sp)
+lw $t9 -100($sp)
+mul $t9 $t8 $t9
+sw $t9 -96($sp)
+addi $t8 $zero 1
+sw $t8 -104($sp)
+lw $t8 -104($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -104($sp)
+addi $t8 $zero 2
+sw $t8 -108($sp)
+lw $t8 -108($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -108($sp)
+lw $t8 -104($sp)
+lw $t9 -108($sp)
+mul $t9 $t8 $t9
+sw $t9 -104($sp)
+lw $t8 -96($sp)
+lw $t9 -104($sp)
+add $t9 $t8 $t9
+sw $t9 -96($sp)
+lw $t8 -92($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 -96($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 1
+sw $t8 -112($sp)
+addi $t8 $zero 0
+sw $t8 -116($sp)
+lw $t8 -116($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -116($sp)
+addi $t8 $zero 1
+sw $t8 -120($sp)
+lw $t8 -120($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -120($sp)
+lw $t8 -116($sp)
+lw $t9 -120($sp)
+mul $t9 $t8 $t9
+sw $t9 -116($sp)
+addi $t8 $zero 1
+sw $t8 -124($sp)
+lw $t8 -124($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -124($sp)
+addi $t8 $zero 3
+sw $t8 -128($sp)
+lw $t8 -128($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -128($sp)
+lw $t8 -124($sp)
+lw $t9 -128($sp)
+mul $t9 $t8 $t9
+sw $t9 -124($sp)
+lw $t8 -116($sp)
+lw $t9 -124($sp)
+add $t9 $t8 $t9
+sw $t9 -116($sp)
+lw $t8 -112($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 -116($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 2
+sw $t8 -132($sp)
+addi $t8 $zero 2
+sw $t8 -136($sp)
+lw $t8 -136($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -136($sp)
+addi $t8 $zero 0
+sw $t8 -140($sp)
+lw $t8 -140($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -140($sp)
+lw $t8 -136($sp)
+lw $t9 -140($sp)
+mul $t9 $t8 $t9
+sw $t9 -136($sp)
+addi $t8 $zero 3
+sw $t8 -144($sp)
+lw $t8 -144($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -144($sp)
+addi $t8 $zero 2
+sw $t8 -148($sp)
+lw $t8 -148($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -148($sp)
+lw $t8 -144($sp)
+lw $t9 -148($sp)
+mul $t9 $t8 $t9
+sw $t9 -144($sp)
+lw $t8 -136($sp)
+lw $t9 -144($sp)
+add $t9 $t8 $t9
+sw $t9 -136($sp)
+lw $t8 -132($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 -136($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 3
+sw $t8 -152($sp)
+addi $t8 $zero 2
+sw $t8 -156($sp)
+lw $t8 -156($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -156($sp)
+addi $t8 $zero 1
+sw $t8 -160($sp)
+lw $t8 -160($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -160($sp)
+lw $t8 -156($sp)
+lw $t9 -160($sp)
+mul $t9 $t8 $t9
+sw $t9 -156($sp)
+addi $t8 $zero 3
+sw $t8 -164($sp)
+lw $t8 -164($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -164($sp)
+addi $t8 $zero 3
+sw $t8 -168($sp)
+lw $t8 -168($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -168($sp)
+lw $t8 -164($sp)
+lw $t9 -168($sp)
+mul $t9 $t8 $t9
+sw $t9 -164($sp)
+lw $t8 -156($sp)
+lw $t9 -164($sp)
+add $t9 $t8 $t9
+sw $t9 -156($sp)
+lw $t8 -152($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 -156($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 0
+sw $t8 -172($sp)
+addi $t8 $zero 0
+sw $t8 -176($sp)
+lw $t8 -176($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -176($sp)
+addi $t8 $zero 32767
+sw $t8 -180($sp)
+lw $t8 -176($sp)
+lw $t9 -180($sp)
+and $t9 $t8 $t9
+sw $t9 -176($sp)
+lw $t8 -172($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 -176($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 1
+sw $t8 -184($sp)
+addi $t8 $zero 1
+sw $t8 -188($sp)
+lw $t8 -188($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -188($sp)
+addi $t8 $zero 32767
+sw $t8 -192($sp)
+lw $t8 -188($sp)
+lw $t9 -192($sp)
+and $t9 $t8 $t9
+sw $t9 -188($sp)
+lw $t8 -184($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 -188($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 2
+sw $t8 -196($sp)
+addi $t8 $zero 2
+sw $t8 -200($sp)
+lw $t8 -200($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -200($sp)
+addi $t8 $zero 32767
+sw $t8 -204($sp)
+lw $t8 -200($sp)
+lw $t9 -204($sp)
+and $t9 $t8 $t9
+sw $t9 -200($sp)
+lw $t8 -196($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 -200($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 3
+sw $t8 -208($sp)
+addi $t8 $zero 3
+sw $t8 -212($sp)
+lw $t8 -212($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -212($sp)
+addi $t8 $zero 32767
+sw $t8 -216($sp)
+lw $t8 -212($sp)
+lw $t9 -216($sp)
+and $t9 $t8 $t9
+sw $t9 -212($sp)
+lw $t8 -208($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 -212($sp)
+sw $t9 0($t8)
+
+j IF_OUT_0
+ELSE_0:
+IF_OUT_0:
+
+add $t8 $zero $s0
+sw $t8 -220($sp)
+addi $t8 $zero 1
+sw $t8 -224($sp)
+lw $t8 -220($sp)
+lw $t9 -224($sp)
+srav $t9 $t8 $t9
+sw $t9 -220($sp)
+lw $t8 -220($sp)
+add $s0 $t8 $zero
+
+addi $t8 $zero 0
+sw $t8 -228($sp)
+addi $t8 $zero 0
+sw $t8 -232($sp)
+lw $t8 -232($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -232($sp)
+addi $t8 $zero 0
+sw $t8 -236($sp)
+lw $t8 -236($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -236($sp)
+lw $t8 -232($sp)
+lw $t9 -236($sp)
+mul $t9 $t8 $t9
+sw $t9 -232($sp)
+addi $t8 $zero 1
+sw $t8 -240($sp)
+lw $t8 -240($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -240($sp)
+addi $t8 $zero 2
+sw $t8 -244($sp)
+lw $t8 -244($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -244($sp)
+lw $t8 -240($sp)
+lw $t9 -244($sp)
+mul $t9 $t8 $t9
+sw $t9 -240($sp)
+lw $t8 -232($sp)
+lw $t9 -240($sp)
+add $t9 $t8 $t9
+sw $t9 -232($sp)
+lw $t8 -228($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 -232($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 1
+sw $t8 -248($sp)
+addi $t8 $zero 0
+sw $t8 -252($sp)
+lw $t8 -252($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -252($sp)
+addi $t8 $zero 1
+sw $t8 -256($sp)
+lw $t8 -256($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -256($sp)
+lw $t8 -252($sp)
+lw $t9 -256($sp)
+mul $t9 $t8 $t9
+sw $t9 -252($sp)
+addi $t8 $zero 1
+sw $t8 -260($sp)
+lw $t8 -260($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -260($sp)
+addi $t8 $zero 3
+sw $t8 -264($sp)
+lw $t8 -264($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -264($sp)
+lw $t8 -260($sp)
+lw $t9 -264($sp)
+mul $t9 $t8 $t9
+sw $t9 -260($sp)
+lw $t8 -252($sp)
+lw $t9 -260($sp)
+add $t9 $t8 $t9
+sw $t9 -252($sp)
+lw $t8 -248($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 -252($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 2
+sw $t8 -268($sp)
+addi $t8 $zero 2
+sw $t8 -272($sp)
+lw $t8 -272($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -272($sp)
+addi $t8 $zero 0
+sw $t8 -276($sp)
+lw $t8 -276($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -276($sp)
+lw $t8 -272($sp)
+lw $t9 -276($sp)
+mul $t9 $t8 $t9
+sw $t9 -272($sp)
+addi $t8 $zero 3
+sw $t8 -280($sp)
+lw $t8 -280($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -280($sp)
+addi $t8 $zero 2
+sw $t8 -284($sp)
+lw $t8 -284($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -284($sp)
+lw $t8 -280($sp)
+lw $t9 -284($sp)
+mul $t9 $t8 $t9
+sw $t9 -280($sp)
+lw $t8 -272($sp)
+lw $t9 -280($sp)
+add $t9 $t8 $t9
+sw $t9 -272($sp)
+lw $t8 -268($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 -272($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 3
+sw $t8 -288($sp)
+addi $t8 $zero 2
+sw $t8 -292($sp)
+lw $t8 -292($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -292($sp)
+addi $t8 $zero 1
+sw $t8 -296($sp)
+lw $t8 -296($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -296($sp)
+lw $t8 -292($sp)
+lw $t9 -296($sp)
+mul $t9 $t8 $t9
+sw $t9 -292($sp)
+addi $t8 $zero 3
+sw $t8 -300($sp)
+lw $t8 -300($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -300($sp)
+addi $t8 $zero 3
+sw $t8 -304($sp)
+lw $t8 -304($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -304($sp)
+lw $t8 -300($sp)
+lw $t9 -304($sp)
+mul $t9 $t8 $t9
+sw $t9 -300($sp)
+lw $t8 -292($sp)
+lw $t9 -300($sp)
+add $t9 $t8 $t9
+sw $t9 -292($sp)
+lw $t8 -288($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 -292($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 0
+sw $t8 -308($sp)
+addi $t8 $zero 0
+sw $t8 -312($sp)
+lw $t8 -312($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -312($sp)
+addi $t8 $zero 32767
+sw $t8 -316($sp)
+lw $t8 -312($sp)
+lw $t9 -316($sp)
+and $t9 $t8 $t9
+sw $t9 -312($sp)
+lw $t8 -308($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -312($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 1
+sw $t8 -320($sp)
+addi $t8 $zero 1
+sw $t8 -324($sp)
+lw $t8 -324($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -324($sp)
+addi $t8 $zero 32767
+sw $t8 -328($sp)
+lw $t8 -324($sp)
+lw $t9 -328($sp)
+and $t9 $t8 $t9
+sw $t9 -324($sp)
+lw $t8 -320($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -324($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 2
+sw $t8 -332($sp)
+addi $t8 $zero 2
+sw $t8 -336($sp)
+lw $t8 -336($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -336($sp)
+addi $t8 $zero 32767
+sw $t8 -340($sp)
+lw $t8 -336($sp)
+lw $t9 -340($sp)
+and $t9 $t8 $t9
+sw $t9 -336($sp)
+lw $t8 -332($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -336($sp)
+sw $t9 0($t8)
+
+addi $t8 $zero 3
+sw $t8 -344($sp)
+addi $t8 $zero 3
+sw $t8 -348($sp)
+lw $t8 -348($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -32
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -348($sp)
+addi $t8 $zero 32767
+sw $t8 -352($sp)
+lw $t8 -348($sp)
+lw $t9 -352($sp)
+and $t9 $t8 $t9
+sw $t9 -348($sp)
+lw $t8 -344($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 0
+add $t8 $t9 $sp
+lw $t9 -348($sp)
+sw $t9 0($t8)
+
+j WHILE_0
+WHILE_OUT_0:
+
+addi $t8 $zero 2
+sw $t8 -356($sp)
+lw $t8 -356($sp)
+addi $t9 $zero -4
+mul $t9 $t9 $t8
+addi $t9 $t9 -16
+add $t8 $t9 $sp
+lw $t9 0($t8)
+sw $t9 -356($sp)
+lw $a0 -356($sp)
+addi $v0 $zero 1
+syscall
+
+END:

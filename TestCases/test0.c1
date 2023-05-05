@@ -1,0 +1,6 @@
+int a = 4;
+int b = 1;
+int c = a + 1;
+
+printf(c);
+return;

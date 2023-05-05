@@ -1,0 +1,69 @@
+main:
+addi $t0 $zero 3
+add $t8 $zero $t0
+add $s0 $zero $t8
+add $t8 $zero $s0
+sw $t8 0($sp)
+addi $t0 $zero 3
+lw $t8 0($sp)
+add $t9 $zero $t0
+slt $t9 $t9 $t8
+sw $t9 0($sp)
+lw $t8 0($sp)
+beq $t8 $zero ELSE_0
+add $t8 $zero $s0
+sw $t8 -4($sp)
+addi $t0 $zero 2
+lw $t8 -4($sp)
+add $t9 $zero $t0
+slt $t9 $t9 $t8
+sw $t9 -4($sp)
+lw $t8 -4($sp)
+beq $t8 $zero ELSE_1
+add $t8 $zero $s0
+sw $t8 -8($sp)
+addi $t0 $zero 1
+lw $t8 -8($sp)
+add $t9 $zero $t0
+add $t9 $t8 $t9
+sw $t9 -8($sp)
+lw $t8 -8($sp)
+add $s0 $t8 $zero
+
+j IF_OUT_1
+ELSE_1:
+IF_OUT_1:
+
+add $t8 $zero $s0
+sw $t8 -12($sp)
+addi $t0 $zero 1
+lw $t8 -12($sp)
+add $t9 $zero $t0
+add $t9 $t8 $t9
+sw $t9 -12($sp)
+lw $t8 -12($sp)
+add $s0 $t8 $zero
+
+j IF_OUT_0
+ELSE_0:
+add $t8 $zero $s0
+sw $t8 -16($sp)
+addi $t0 $zero 1
+lw $t8 -16($sp)
+add $t9 $zero $t0
+sub $t9 $t8 $t9
+sw $t9 -16($sp)
+lw $t8 -16($sp)
+add $s0 $t8 $zero
+
+IF_OUT_0:
+
+add $t8 $zero $s0
+sw $t8 -20($sp)
+lw $a0 -20($sp)
+addi $v0 $zero 1
+syscall
+
+j END
+
+END:
